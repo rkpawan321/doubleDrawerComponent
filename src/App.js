@@ -25,7 +25,12 @@ class App extends Component {
 
 
   backdropClickHandler = () => {
-      this.setState({sideDrawerOpen: false, secondDrawerOpen: false});
+    if(this.state.secondDrawerOpen){
+      this.setState({ secondDrawerOpen: false});
+    }
+    else {
+      this.setState({ sideDrawerOpen: false});
+    }
   };
 
     render() {
