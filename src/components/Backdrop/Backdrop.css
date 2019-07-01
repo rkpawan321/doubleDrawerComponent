@@ -1,0 +1,10 @@
+.backdrop {
+    position: fixed;     /* so that u cant scroll it away */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;     /* so that u cant scroll it away */
+    background:rgba(0,0,0,0.3);/* transparent black */
+    z-index: 100;     /*so that it is below something which has a z-index of greater than 100*/
+}

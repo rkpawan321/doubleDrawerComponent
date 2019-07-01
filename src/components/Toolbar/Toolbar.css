@@ -1,0 +1,58 @@
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #521751;
+    height: 56px;
+} 
+
+.toolbar_navigation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.toolbar_logo {
+    margin-left: 1rem;
+}
+
+.toolbar_logo a {
+color: white;
+text-decoration: none;
+font-size: 2rem;
+}
+
+.toolbar_navigation-items a {
+    color: white;
+    text-decoration:  none;
+}
+
+.toolbar_navigation-items ul {
+    list-style: none;
+    margin:0;
+    padding: 0;
+    display: flex;      /* This is to make Products and Users to come in same line instead of one below another */
+}
+
+.toolbar_navigation-items li {
+    padding: 0 0.5rem;
+}
+
+
+.toolbar_navigation-items a:hover,
+.toolbar_navigation-items a:active {
+    color: #fa923f;
+}
+
+.spacer{
+    flex: 1;   /*This means that this will take all available space*/
+}
+
+@media (max-width: 768px) {    /*If I am below this mark   */
+    .toolbar_navigation-items {
+        display: none;            /*DO not show toolbar_navigation-items */
+ }
+}
+

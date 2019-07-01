@@ -1,0 +1,23 @@
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* Makes sure that the FREE SPACE is distributed between these elements */
+    height: 24px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;  /* Lines stay inside the button */
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button_line {
+    width: 30px;
+    height: 2px;
+    background: white;
+}
