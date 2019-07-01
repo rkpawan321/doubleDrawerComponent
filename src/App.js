@@ -1,6 +1,7 @@
 import React , {Component} from 'react';
 
 import SideDrawer from './components/SideDrawer/SideDrawer';
+import SecondDrawer from './components/SideDrawer/SecondDrawer';
 import Toolbar from './components/Toolbar/Toolbar';
 import Backdrop from './components/Backdrop/Backdrop';
 
@@ -31,6 +32,8 @@ class App extends Component {
             <div style={{height: '100%'}}>
               <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
               <SideDrawer show={this.state.sideDrawerOpen} />
+              <SecondDrawer/>
+              
               {/* {sideDrawer} */}
               {backdrop}
               <main style={{marginTop: '64px'}}>
