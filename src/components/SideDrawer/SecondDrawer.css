@@ -1,13 +1,13 @@
-.side-drawer {
+.second-drawer {
     height: 100%;
     background: white;
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
-    right: 400px;
+    right: 0;
     width: 100%;
-    max-width: 400px;
-    z-index: 200;
+    max-width: 800px;
+    z-index: 100;
      transform: translateX(100%); 
     transition: transform 0.3s ease-out; /*  transition needs to listen to transform property ;0.3s to transition from state A to state B */
     /* How should the available time to be distributed */
@@ -16,7 +16,7 @@
 
 }
 
-.side-drawer ul {
+.second-drawer ul {
     height: 100%;
     list-style: none;
     display: flex;
@@ -24,22 +24,22 @@
     justify-content: center;
 }
 
-.side-drawer li {
+.second-drawer li {
     margin: 0.5rem 0;   /* top AND bottom .... left AND right */
 }
 
-.side-drawer a {
+.second-drawer a {
     color: #521751;
     text-decoration: none;
     font-size: 1.2rem;
 }  
 
-.side-drawer a:hover,
-.side-drawer a:active {
+.second-drawer a:hover,
+.second-drawer a:active {
 color: #fa923f;
 }
 
-.side-drawer.open {    /*So that I can only relate to elements which have both classes sideDrawer and open classes */
+.second-drawer.open {    /*So that I can only relate to elements which have both classes sideDrawer and open classes */
     transform: translateX(0);     /* Tranforming it to Translate it to move it on left or right on X-axis;  0 is the default position */
 }
 
@@ -49,7 +49,7 @@ color: #fa923f;
 
 /* FOR MAKING ITHE WEBSITE RESPONSIVE   */
 /* @media (min-width: 769px){    /*If we are having a min width of 769px, then make display none for side drawer (make it not look) */
-    /* .side-drawer { */
+    /* .second-drawer { */
         /* display: none; */
     /* } */
 /* } */

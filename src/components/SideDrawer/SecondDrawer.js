@@ -2,10 +2,10 @@ import React from 'react';
 
 import './SecondDrawer.css';
 
-const sideDrawer = props => {
-let drawerClasses = 'side-drawer';
-if(props.show){
-    drawerClasses = 'side-drawer open';
+const secondDrawer = props => {
+let drawerClasses = 'second-drawer';
+if(props.secondShow){
+    drawerClasses = 'second-drawer open';
 }
     return (
     <nav className={drawerClasses}>
@@ -17,4 +17,4 @@ if(props.show){
 );
     };
 
-export default sideDrawer;
+export default secondDrawer;

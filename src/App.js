@@ -7,7 +7,8 @@ import Backdrop from './components/Backdrop/Backdrop';
 
 class App extends Component {
   state = {
-   sideDrawerOpen: false
+   sideDrawerOpen: false,
+   secondDrawerOpen: false,
   };
 
   drawerToggleClickHandler = () => {
@@ -16,28 +17,37 @@ class App extends Component {
   });
   };
 
+  secondDrawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {secondDrawerOpen: !prevState.secondDrawerOpen };
+  });
+  };
+
+
   backdropClickHandler = () => {
-      this.setState({sideDrawerOpen: false});
+      this.setState({sideDrawerOpen: false, secondDrawerOpen: false});
   };
 
     render() {
       // let sideDrawer;
       let backdrop;
 
-      if (this.state.sideDrawerOpen) {
+      if (this.state.sideDrawerOpen || this.state.secondDrawerOpen) {
         // sideDrawer = <SideDrawer/>;
         backdrop = <Backdrop click={this.backdropClickHandler}/>;
       }
         return(
             <div style={{height: '100%'}}>
               <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
-              <SideDrawer show={this.state.sideDrawerOpen} />
-              <SecondDrawer/>
-              
-              {/* {sideDrawer} */}
               {backdrop}
+              <SecondDrawer secondShow={this.state.secondDrawerOpen}/>
+              <SideDrawer show={this.state.sideDrawerOpen} secondDrawerOpen={this.secondDrawerToggleClickHandler}/>
+              {/* {sideDrawer} */}
+              
               <main style={{marginTop: '64px'}}>
-              <p>This is the page content</p>
+              <p>This is the page content
+                <button onClick={this.secondDrawerToggleClickHandler}>BRO</button>
+              </p>
               </main> 
             </div>
         )
