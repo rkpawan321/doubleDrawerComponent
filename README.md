@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+DEMO
+
+https://codesandbox.io/embed/github/rkpawan321/doubleDrawerComponent/tree/master/?fontsize=14
+
+AUTHOR : PAWAN R K
+
 ## Available Scripts
 
 In the project directory, you can run:
