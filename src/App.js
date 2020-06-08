@@ -45,13 +45,12 @@ class App extends Component {
             <div style={{height: '100%'}}>
               <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
               {backdrop}
-              <SecondDrawer secondShow={this.state.secondDrawerOpen}/>
+              <SecondDrawer secondShow={this.state.secondDrawerOpen} firstShow={this.state.sideDrawerOpen}/>
               <SideDrawer show={this.state.sideDrawerOpen} secondDrawerOpen={this.secondDrawerToggleClickHandler}/>
               {/* {sideDrawer} */}
               
               <main style={{marginTop: '64px'}}>
               <p>This is the page content
-                <button onClick={this.secondDrawerToggleClickHandler}>BRO</button>
               </p>
               </main> 
             </div>

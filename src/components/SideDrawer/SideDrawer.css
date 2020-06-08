@@ -1,18 +1,19 @@
 .side-drawer {
     height: 100%;
     background: white;
+    top: 56px;
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position: fixed;
-    top: 0;
-    right: 0;
+    left: 0;  /* make right : 0 for right side */
     width: 100%;
     max-width: 400px;
     z-index: 200;
-     transform: translateX(100%); 
-    transition: transform 0.3s ease-out; /*  transition needs to listen to transform property ;0.3s to transition from state A to state B */
+     transform: translateX(-100%);  /*For right side make  transform: translateX(100%); */
+    transition: transform 0.9s; /*  transition needs to listen to transform property ;0.3s to transition from state A to state B */
     /* How should the available time to be distributed */
     /*  EASE-OUT startfast and end slow */
     /* start slow and end fast */
+    /* transition: opacity 3s; */
 
 }
 
@@ -41,6 +42,7 @@ color: #fa923f;
 
 .side-drawer.open {    /*So that I can only relate to elements which have both classes sideDrawer and open classes */
     transform: translateX(0);     /* Tranforming it to Translate it to move it on left or right on X-axis;  0 is the default position */
+
 }
 
 
